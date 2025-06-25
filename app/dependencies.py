@@ -1,5 +1,4 @@
 from pymongo import AsyncMongoClient
-from pymongo.server_api import ServerApi
 import os
 
 mongo_user = os.environ["MONGO_INITDB_ROOT_USERNAME"]
