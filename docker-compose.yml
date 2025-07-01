@@ -26,8 +26,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
-    ports:
-      - "27017:27017"
+    #ports:
+    #  - "27017:27017"
     networks:
       - mongodb_network
 
@@ -52,6 +52,7 @@ services:
   grafana:
     image: grafana/grafana
     user: root
+    restart: always
     ports:
       - 3000:3000
     volumes:
